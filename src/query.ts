@@ -121,10 +121,10 @@ export const DEFAULT_QUERY_CONFIG: QueryConfig = {
   omitNonPositionalOverPositionalChannels: true,
   omitVerticalDotPlot: true,
 
-  preferredBinAxis: Channel.X,
-  preferredTemporalAxis: Channel.X,
+  preferredBinAxis: null, //Channel.X,
+  preferredTemporalAxis: null, // Channel.X,
   preferredOrdinalAxis: null, // Channel.Y, // ordinal on y makes it easier to read.
-  preferredNominalAxis: Channel.Y, // nominal on y makes it easier to read.
+  preferredNominalAxis:  null, // Channel.Y, // nominal on y makes it easier to read.
 
   // Encoding Constraints -- See description inside src/constraints/encoding.ts
   maxCardinalityForCategoricalColor: 20,

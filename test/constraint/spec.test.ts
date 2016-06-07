@@ -760,7 +760,7 @@ describe('constraints/spec', () => {
         ]
       });
 
-      assert.isTrue(SPEC_CONSTRAINT_INDEX['preferredBinAxis'].satisfy(specM, schema, stats, defaultOpt));
+      assert.isTrue(SPEC_CONSTRAINT_INDEX['preferredBinAxis'].satisfy(specM, schema, stats, {preferredBinAxis: Channel.X}));
     });
 
     it('should return true if both axes are not binned', () => {
@@ -772,7 +772,7 @@ describe('constraints/spec', () => {
         ]
       });
 
-      assert.isTrue(SPEC_CONSTRAINT_INDEX['preferredBinAxis'].satisfy(specM, schema, stats, defaultOpt));
+      assert.isTrue(SPEC_CONSTRAINT_INDEX['preferredBinAxis'].satisfy(specM, schema, stats,  {preferredBinAxis: Channel.X}));
     });
 
     it('should return true if the preferred axis is binned', () => {
@@ -784,7 +784,7 @@ describe('constraints/spec', () => {
         ]
       });
 
-      assert.isTrue(SPEC_CONSTRAINT_INDEX['preferredBinAxis'].satisfy(specM, schema, stats, defaultOpt));
+      assert.isTrue(SPEC_CONSTRAINT_INDEX['preferredBinAxis'].satisfy(specM, schema, stats,  {preferredBinAxis: Channel.X}));
 
       // TODO: add another case for yEncQ
     });
@@ -798,7 +798,7 @@ describe('constraints/spec', () => {
         ]
       });
 
-      assert.isFalse(SPEC_CONSTRAINT_INDEX['preferredBinAxis'].satisfy(specM, schema, stats, defaultOpt));
+      assert.isFalse(SPEC_CONSTRAINT_INDEX['preferredBinAxis'].satisfy(specM, schema, stats,  {preferredBinAxis: Channel.X}));
 
       // TODO: add another case for yEncQ
     });
@@ -814,7 +814,7 @@ describe('constraints/spec', () => {
         ]
       });
 
-      assert.isTrue(SPEC_CONSTRAINT_INDEX['preferredTemporalAxis'].satisfy(specM, schema, stats, defaultOpt));
+      assert.isTrue(SPEC_CONSTRAINT_INDEX['preferredTemporalAxis'].satisfy(specM, schema, stats, {preferredTemporalAxis: Channel.X}));
     });
 
     it('should return true if both axes are not temporal', () => {
@@ -826,7 +826,7 @@ describe('constraints/spec', () => {
         ]
       });
 
-      assert.isTrue(SPEC_CONSTRAINT_INDEX['preferredTemporalAxis'].satisfy(specM, schema, stats, defaultOpt));
+      assert.isTrue(SPEC_CONSTRAINT_INDEX['preferredTemporalAxis'].satisfy(specM, schema, stats, {preferredTemporalAxis: Channel.X}));
     });
 
     it('should return true if the preferred axis is binned', () => {
@@ -838,7 +838,7 @@ describe('constraints/spec', () => {
         ]
       });
 
-      assert.isTrue(SPEC_CONSTRAINT_INDEX['preferredTemporalAxis'].satisfy(specM, schema, stats, defaultOpt));
+      assert.isTrue(SPEC_CONSTRAINT_INDEX['preferredTemporalAxis'].satisfy(specM, schema, stats, {preferredTemporalAxis: Channel.X}));
 
       // TODO: add another case for yEncQ
     });
@@ -852,7 +852,7 @@ describe('constraints/spec', () => {
         ]
       });
 
-      assert.isFalse(SPEC_CONSTRAINT_INDEX['preferredTemporalAxis'].satisfy(specM, schema, stats, defaultOpt));
+      assert.isFalse(SPEC_CONSTRAINT_INDEX['preferredTemporalAxis'].satisfy(specM, schema, stats, {preferredTemporalAxis: Channel.X}));
 
       // TODO: add another case for yEncQ
     });
